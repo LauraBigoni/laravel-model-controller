@@ -8,7 +8,7 @@
     @yield('cdns')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
     @yield('styles')
-    <title>@yield('title')</title>
+    <title>{{ env('APP_NAME') }}</title>
 </head>
 
 <body>
