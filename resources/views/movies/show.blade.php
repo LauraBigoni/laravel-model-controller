@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 d-flex flex-column justify-content-center align-items-center">
                 <div class="card m-5">
                     <div class="card-body">
                         <h5 class="card-title">{{ $movie->title }}</h5>
@@ -21,6 +21,14 @@
                         <p>Voto: {{ $movie->vote }}</p>
                     </div>
                 </div>
+                <nav>
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="{{ url("/movies/$prev") }}">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="{{ url("/movies/$next") }}">Next</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
