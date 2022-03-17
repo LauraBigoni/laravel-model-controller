@@ -14,6 +14,7 @@ class MovieController extends Controller
     }
 
     public function show() {
-        return view('movies.show', compact('movies'));
+        $movie = Movie::first();
+        return view('movies.show', compact('movie'));
     }
 }

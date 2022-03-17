@@ -33,7 +33,7 @@
                                 <td>{{ $movie->nationality }}</td>
                                 <td>{{ $movie->date }}</td>
                                 <td>{{ $movie->vote }}</td>
-                                <td><a href="{{ url("/movie/$movie->id") }}"><i class="fa-solid fa-eye"></i></a></td>
+                                <td><a href="{{ url("/movies.show/$movie->id") }}"><i class="fa-solid fa-eye"></i></a></td>
                             </tr>
                         @endforeach
                     </tbody>
