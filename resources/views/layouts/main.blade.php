@@ -12,7 +12,18 @@
 </head>
 
 <body>
-    @yield('content')
+    <header>
+        <nav class="navbar navbar-dark bg-dark" style="background-color: #e3f2fd;">
+            <div class="container-xs">
+                <a class="navbar-brand ps-4" href="{{ route('home') }}">Home</a>
+                <a class="navbar-brand" href="{{ route('movies.index') }}">Movies</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        @yield('content')
+    </main>
 
     @yield('scripts')
 </body>
