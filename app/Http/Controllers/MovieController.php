@@ -13,8 +13,8 @@ class MovieController extends Controller
         return view('movies.index', compact('movies'));
     }
 
-    public function show() {
-        $movie = Movie::first();
+    public function show($id) {
+        $movie = Movie::findOrFail($id);
         return view('movies.show', compact('movie'));
     }
 }
